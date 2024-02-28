@@ -40,7 +40,8 @@ we deploy the playbook:
 
 we check nexus is running:
 
-![Screenshot 2024-02-28 at 12 38 40](https://github.com/redjules/Deploy-Nexus/assets/106017493/8394a21f-e9de-4be9-b638-1d14de5057b5)
+<img width="899" alt="Screenshot 2024-02-28 at 12 42 35" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/650b818f-01f2-4d12-af9f-24cd59cdff88">
+
 
 and it is!
 
