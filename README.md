@@ -1,36 +1,55 @@
 # Deploy Nexus
 
-We will push a Docker repository on Nexus:
+![Screenshot 2024-02-28 at 11 03 18](https://github.com/redjules/Deploy-Nexus/assets/106017493/655d1adf-e1db-4f8b-84f9-5e769d079d0a)
 
-<img width="803" alt="Screenshot 2024-02-27 at 09 32 46" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/72a6e933-fd5d-48e0-8caf-0156c61b0983">
+we create a droplet:
 
-we create a repo in Nexus:
+![Screenshot 2024-02-28 at 11 07 44](https://github.com/redjules/Deploy-Nexus/assets/106017493/03f560ce-5bde-42cf-af1c-60ffddbe1f1e)
 
-<img width="522" alt="Screenshot 2024-02-27 at 09 33 13" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/516ae691-b3c6-499f-bb4e-aca4f5b4e370">
 
-we select mystore in Blobstore and the rest as default
+![Screenshot 2024-02-28 at 11 08 40](https://github.com/redjules/Deploy-Nexus/assets/106017493/a1e9fce2-fa38-477c-8e25-6bf31afe759b)
 
-<img width="546" alt="Screenshot 2024-02-27 at 09 34 05" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/df6bd109-30d1-46cd-96fe-35d1736c60cd">
+we deploy a new playbook: deploy-nexus.yaml
 
-we create a new role that has access to the Docker repository we created:
 
-<img width="443" alt="Screenshot 2024-02-27 at 09 35 35" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/4acb95cf-0e6a-4c46-85f7-7272da68366a">
+![Screenshot 2024-02-28 at 11 11 13](https://github.com/redjules/Deploy-Nexus/assets/106017493/01157fbd-a143-4094-94cf-2a39bf4cdd0f)
 
-we give access to our user to the repo:
 
-<img width="471" alt="Screenshot 2024-02-27 at 09 35 55" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/19e5e1ec-6282-4d24-b3a8-a28cf03dc301">
+![Screenshot 2024-02-28 at 11 13 12](https://github.com/redjules/Deploy-Nexus/assets/106017493/5c5616ff-ed23-4e3b-89f1-5aecfbdc412e)
 
-we configure a port for our Docker repo:
+new task:
 
-<img width="363" alt="Screenshot 2024-02-27 at 09 37 21" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/df07bcde-24c4-4bec-b226-94357a2a98ee">
+![Screenshot 2024-02-28 at 11 16 25](https://github.com/redjules/Deploy-Nexus/assets/106017493/3c0bef0c-2703-4a30-a409-fdba5b52815b)
 
-<img width="716" alt="Screenshot 2024-02-27 at 09 38 01" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/4d495e44-fb97-4afb-9df9-38574bd08c13">
+![Screenshot 2024-02-28 at 11 25 20](https://github.com/redjules/Deploy-Nexus/assets/106017493/437232ae-3ecb-4b63-997c-d41a4b358f37)
 
-we go to firewall in a Digital Ocean droplet and put the port 8083 in inbound rules:
+new tasks make user owner of nexus folder and sonartype:
 
-<img width="648" alt="Screenshot 2024-02-27 at 09 38 56" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/b70e98ff-8fe7-4734-a328-e5d113d0f2e5">
+![Screenshot 2024-02-28 at 12 24 53](https://github.com/redjules/Deploy-Nexus/assets/106017493/10ae0f91-4e0e-4032-b701-c625c86bf3ce)
 
-we create a Docker Realm:
+new task about staryting nexus with nexus user:
 
-<img width="708" alt="Screenshot 2024-02-27 at 09 40 18" src="https://github.com/redjules/Deploy-Nexus/assets/106017493/4f084cd9-1f78-43af-8ec4-28f55c1a13ca">
+![Screenshot 2024-02-28 at 12 27 30](https://github.com/redjules/Deploy-Nexus/assets/106017493/0daa0724-1335-4b10-8a1b-f5ca1e36b64d)
+
+![Screenshot 2024-02-28 at 12 34 31](https://github.com/redjules/Deploy-Nexus/assets/106017493/10ad23ea-30eb-40a5-ae26-3fa1292ea3fa)
+
+
+we deploy the playbook:
+
+![Screenshot 2024-02-28 at 12 37 43](https://github.com/redjules/Deploy-Nexus/assets/106017493/85b975fe-d88d-463d-937b-b7ee1847cb37)
+
+we check nexus is running:
+
+![Screenshot 2024-02-28 at 12 38 40](https://github.com/redjules/Deploy-Nexus/assets/106017493/8394a21f-e9de-4be9-b638-1d14de5057b5)
+
+and it is!
+
+we write another play:
+
+![Screenshot 2024-02-28 at 12 39 51](https://github.com/redjules/Deploy-Nexus/assets/106017493/dd35fd8f-0789-4c2c-bdd8-25e6737d58dd)
+
+
+![Screenshot 2024-02-28 at 12 41 36](https://github.com/redjules/Deploy-Nexus/assets/106017493/e18170f0-e91a-4db3-8505-c4aba638c1b1)
+
+
 
